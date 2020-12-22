@@ -1,0 +1,59 @@
+{
+  "shopName": "DJI online store",
+  "shopURL": "https://liklokshop.com",
+  "shopID": "string",
+  "shopCountry": "USA",
+  "redirectURL": "https://callbackURLafterpayment.com",
+  "cancelRedirectURL": "https://callbackURLforcancel.com",
+  "completeCallbackURL": "https://callbackURLforcompletion.com",
+  "notificationURL": "https://notifyyouafterconfirmation.com",
+  "notificationEmail": "notify@youremail.com",
+  "order": {
+    "currency": "USD",
+    "amount": 349,
+    "orderID": "100003849ejdlciemb",
+    "shippingContact": {
+      "name": "John Wick",
+      "firstname": "John",
+      "lastname": "Wick",
+      "company": "Bleev Technologies",
+      "email": "johnw@email.com",
+      "phone": "777-999-6688",
+      "address1": "1234 5th Ave.",
+      "address2": "unit 67",
+      "city": "Vancouver",
+      "state": "BC",
+      "country": "CA",
+      "postcode": "V5H9I3"
+    },
+    "billingContact": {
+      "name": "John Wick",
+      "firstname": "John",
+      "lastname": "Wick",
+      "company": "Bleev Technologies",
+      "email": "johnw@email.com",
+      "phone": "777-999-6688",
+      "address1": "1234 5th Ave.",
+      "address2": "unit 67",
+      "city": "Vancouver",
+      "state": "BC",
+      "country": "CA",
+      "postcode": "V5H9I3"
+    },
+    "orderDesc": "DJI mavic mini",
+    "items": [
+      {
+        "name": "USB",
+        "quantity": 3,
+        "productID": 10,
+        "variationID": 0,
+        "subtotal": "50",
+        "subtotalTax": "50",
+        "total": "50",
+        "totalTax": "50",
+        "taxClass": ""
+      }
+    ]
+  },
+  "token": "fZpeF6gcskHbSpTgpQCkcJfZpeF6gcskHbSpTgpQCkcJ"
+}
