@@ -23,6 +23,18 @@ Add `lokopay-java-client-1.0-SNAPSHOT.jar` in project class path.
 
 This example shows how to use `lokopay-java-client` to send api request to lokopay.
 
+Firstly, it use the apiSecret in `resources/config.properties` file to generate a signaure which is required to access lokopay API. 
+
+Secondly, it assembly the API request and set up correct request headers to call lokopay API to generate a new invoice. 
+
 ## Run APICallback Example
 
 This example shows how to use `lokopay-java-client` to verify api request from lokopay.
+
+Firstly, it starts localhost server and listening at `localhost:8000`
+
+Seconldy, you can test the verfication by send the call request to http:localhost:8000/test. Then in the `CallBackHandler`, it shows how the signaure in the API call back request will be verified .
+
+
+
+
