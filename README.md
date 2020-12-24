@@ -31,9 +31,9 @@ Secondly, it assembly the API request and set up correct request headers to call
 
 This example shows how to use `lokopay-java-client` to verify api request from lokopay.
 
-Firstly, it starts localhost server and listening at `localhost:8000`
+Firstly, it starts localhost server and listening at `localhost:8000`.
 
-Seconldy, you can test the verfication by send the call request to http:localhost:8000/test. Then in the `CallBackHandler`, it shows how the signaure in the API call back request will be verified .
+Seconldy, you can test the verfication by send the call back request to http:localhost:8000/test. Then in the `CallBackHandler`, it shows how the signaure in the API call back request will be verified.
 
 
 
