@@ -43,9 +43,8 @@ public class APIRequest {
             }
 
             // Generate API signature
-            String message = new LokoAPIContent("POST", prop.getProperty("api.host") + "/invoice", apiRequestBody).ToMessage();
             long nonce = Instant.now().getEpochSecond();
-            String signature = auth.GenerateAPISignature(message, nonce);
+            String signature = auth.GenerateAPISignature("POST", prop.getProperty("api.host") + "/invoice", apiRequestBody, nonce);
 
             // Set up request Headers
             connection.setDoOutput(true);

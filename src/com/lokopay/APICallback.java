@@ -70,9 +70,8 @@ public class APICallback {
                 String requestBody = new String(array, "UTF-8");
 
                 // Verify signature
-                String message = new LokoAPIContent(requestMethod, host + path, requestBody).ToMessage();
                 LokoAuth auth = new LokoAuth(prop.getProperty("api.secret"));
-                boolean isAuthorized = auth.VerifyAPISignature(signature, message, Long.parseLong(nonceStr));
+                boolean isAuthorized = auth.VerifyAPISignature(signature, requestMethod, host + path, requestBody, Long.parseLong(nonceStr));
 
                 // Return response
                 String response;
