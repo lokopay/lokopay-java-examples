@@ -34,13 +34,9 @@ public class APIRequest {
             URL url = new URL(prop.getProperty("api.host") + "/invoice");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
-            // Set up request body
+            // Read request body
             String file = "src/com/lokopay/body.json";
             String apiRequestBody = readFileAsString(file);
-            try (OutputStream os = connection.getOutputStream()) {
-                byte[] input = apiRequestBody.getBytes("utf-8");
-                os.write(input, 0, input.length);
-            }
 
             // Generate API signature
             long nonce = Instant.now().getEpochSecond();
@@ -54,6 +50,12 @@ public class APIRequest {
             connection.setRequestProperty("x-api-key", prop.getProperty("api.key"));
             connection.setRequestProperty("x-signature", signature);
             connection.setRequestProperty("x-nonce", "" + nonce);
+
+            // Set up request body
+            try (OutputStream os = connection.getOutputStream()) {
+                byte[] input = apiRequestBody.getBytes("utf-8");
+                os.write(input, 0, input.length);
+            }
 
             // Send and print response
             connection.getResponseCode();
