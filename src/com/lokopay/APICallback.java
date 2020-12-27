@@ -24,8 +24,8 @@ public class APICallback {
 
     public static void main(String[] args) throws Exception {
 
-        // Start at a local test server listening at: localhost:8000
-        HttpServer server = HttpServer.create(new InetSocketAddress(8000), 0);
+        // Start at a local test server listening at: localhost:8008
+        HttpServer server = HttpServer.create(new InetSocketAddress(8008), 0);
         server.createContext("/test", new CallBackHandler());
         server.setExecutor(null); // creates a default executor
         server.start();
@@ -41,7 +41,6 @@ public class APICallback {
                 prop.load(resourceInput);
 
                 Headers headers = t.getRequestHeaders();
-
                 // Get request headers
                 String nonceStr = "";
                 String signature = "";
@@ -63,6 +62,8 @@ public class APICallback {
                 InputStream is = t.getRequestBody();
                 String requestMethod = t.getRequestMethod();
                 String path = t.getRequestURI().toString();
+                String url = host + path;
+                long nonce = Long.parseLong(nonceStr);
 
                 int available = is.available();
                 byte[] array = new byte[available];
@@ -71,7 +72,7 @@ public class APICallback {
 
                 // Verify signature
                 LokoAuth auth = new LokoAuth(prop.getProperty("api.secret"));
-                boolean isAuthorized = auth.VerifyAPISignature(signature, requestMethod, host + path, requestBody, Long.parseLong(nonceStr));
+                boolean isAuthorized = auth.VerifyAPISignature(signature, requestMethod, url, requestBody, nonce);
 
                 // Return response
                 String response;

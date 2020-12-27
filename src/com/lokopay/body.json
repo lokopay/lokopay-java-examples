@@ -5,13 +5,13 @@
   "shopCountry": "USA",
   "redirectURL": "https://callbackURLafterpayment.com",
   "cancelRedirectURL": "https://callbackURLforcancel.com",
-  "completeCallbackURL": "https://callbackURLforcompletion.com",
+  "completeCallbackURL": "http://localhost:8008/test",
   "notificationURL": "https://notifyyouafterconfirmation.com",
   "notificationEmail": "notify@youremail.com",
   "order": {
     "currency": "USD",
-    "amount": 349,
-    "orderID": "100003849ejdlciemb",
+    "amount": 50,
+    "orderID": "100003849ejdlcieb",
     "shippingContact": {
       "name": "John Wick",
       "firstname": "John",
