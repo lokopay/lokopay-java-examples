@@ -20,8 +20,6 @@ import java.util.Properties;
  * This example shows to how to verify a call back request from lokopay
  */
 public class APICallback {
-//    final static String apiSecret = "MOQFbdCrNR5uggg4XA06V1hZ8RWfkmFsT+LGb9WSZmbhQMoAsxrbGfSyoUFE7n3ApbENneHZ3k+8dQI3NKcbNg==";
-
     public static void main(String[] args) throws Exception {
 
         // Start at a local test server listening at: localhost:8008

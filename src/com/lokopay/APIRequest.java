@@ -1,6 +1,5 @@
 package com.lokopay;
 
-import com.lokopay.sdk.lib.LokoAPIContent;
 import com.lokopay.sdk.lib.LokoAuth;
 
 import java.io.*;
