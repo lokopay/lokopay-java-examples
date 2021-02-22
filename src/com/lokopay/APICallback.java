@@ -61,6 +61,7 @@ public class APICallback {
                 String requestMethod = t.getRequestMethod();
                 String path = t.getRequestURI().toString();
                 String url = host + path;
+
                 long nonce = Long.parseLong(nonceStr);
 
                 int available = is.available();

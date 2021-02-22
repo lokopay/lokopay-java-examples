@@ -13,7 +13,7 @@ import java.util.Properties;
 /**
  * This example shows to how to send a API request to lokopay.
  */
-public class APIRequest {
+public class APIRefundRequest {
     public static String readFileAsString(String file) throws Exception {
         return new String(Files.readAllBytes(Paths.get(file)));
     }
@@ -30,16 +30,16 @@ public class APIRequest {
             LokoAuth auth = new LokoAuth(prop.getProperty("api.secret"));
 
             // Set up connection
-            URL url = new URL(prop.getProperty("api.host") + "/invoice");
+            URL url = new URL(prop.getProperty("api.host") + "/refund");
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
             // Read request body
-            String file = "src/com/lokopay/body.json";
+            String file = "src/com/lokopay/API_Create_Refund_Request_Body_V1.json";
             String apiRequestBody = readFileAsString(file);
 
             // Generate API signature
             long nonce = Instant.now().getEpochSecond();
-            String signature = auth.GenerateAPISignature("POST", prop.getProperty("api.host") + "/invoice", apiRequestBody, nonce);
+            String signature = auth.GenerateAPISignature("POST", prop.getProperty("api.host") + "/refund", apiRequestBody, nonce);
 
             // Set up request Headers
             connection.setDoOutput(true);
