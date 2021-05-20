@@ -1,11 +1,10 @@
 {
   "shopName": "DJI online store",
-  "shopURL": "https://liklokshop.com",
-  "shopID": "12345678",
-  "orderID": "100000061",
-  "amount": 10,
-  "currency": "CAD",
+  "shopURL": "http://store.bleev.cloud",
+  "orderID": "193",
+  "amount": 100,
+  "currency": "US",
   "reason": "Shipping error",
-  "customerEmail": "jianli130@gmail.com",
+  "customerEmail": "xjxtju@163.com",
   "completedCallbackURL": "http://localhost:8008/test?HelloWorld=true"
 }

@@ -9,13 +9,13 @@
   "notificationURL": "https://notifyyouafterconfirmation.com",
   "notificationEmail": "notify@youremail.com",
   "order": {
-    "orderID": "100000062",
+    "orderID": "100000067",
     "currency": "CAD",
     "subtotal": 750,
     "shipping": 10,
     "shippingTax": 0,
     "subtotalTax": 90,
-    "amount": 10,
+    "amount": 100,
     "shippingContact": {
       "name": "John shipping",
       "firstname": "John",

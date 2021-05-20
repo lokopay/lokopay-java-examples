@@ -34,7 +34,7 @@ public class APIInvoiceRequest {
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 
             // Read request body
-            String file = "src/com/lokopay/body.json";
+            String file = "src/com/lokopay/API_Create_Invoice_Request_Body_V1.json";
             String apiRequestBody = readFileAsString(file);
 
             // Generate API signature

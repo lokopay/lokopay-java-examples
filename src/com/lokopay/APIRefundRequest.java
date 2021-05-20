@@ -69,6 +69,7 @@ public class APIRefundRequest {
             }
             connection.disconnect();
         }catch (Exception e) {e.printStackTrace();
+            System.out.println("response from lokopay: " + e.toString());
         }
     }
 }
